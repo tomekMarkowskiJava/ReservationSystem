@@ -9,7 +9,7 @@
   </head>
   <body>
   
-  	<form action="/index.html" th:action="@{/index}"  th:object="${comment}" method="post">
+  	<form action="/index.html" th:action="@{/index}"  th:object="${reservation}" method="post">
  	<label>Imię: </label>
   	 <input type="text" th:field="*{name}" placeholder="Podaj swoje imię" name="name" /><br/>
   	 <label>E-mail: </label><br/>

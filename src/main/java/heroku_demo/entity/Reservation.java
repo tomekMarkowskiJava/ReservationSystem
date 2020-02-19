@@ -18,6 +18,11 @@ public class Reservation {
     private String bed;
     private Time time;
 
+    public Reservation(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
     public int getId() {
         return id;
     }
