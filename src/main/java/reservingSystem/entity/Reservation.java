@@ -1,10 +1,9 @@
-package heroku_demo.entity;
+package reservingSystem.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.sql.Time;
-import java.time.LocalDateTime;
 
 @Entity
 public class Reservation {

@@ -1,6 +1,6 @@
-package heroku_demo.repository;
+package reservingSystem.repository;
 
-import heroku_demo.entity.Reservation;
+import reservingSystem.entity.Reservation;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
