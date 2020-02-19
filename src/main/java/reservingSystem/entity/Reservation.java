@@ -16,7 +16,7 @@ public class Reservation {
 
     private String bed;
     private Time time;
-    private int numberOfMinutes;
+//    private int numberOfMinutes;
 
     public Reservation() {
         name="";
