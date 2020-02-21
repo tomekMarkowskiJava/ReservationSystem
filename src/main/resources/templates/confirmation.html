@@ -13,11 +13,13 @@
 <div>
         <h1>Super!</h1>
         <br>
-        <h1><span th:text="${userName} + ' ,twoja rezerwacja została zrealizowana pomyślnie. Potwierdzenie zostało wysłane na adres: '
-         + ${userMail}"></span></h1>
+        <h1>
+            <span th:text="${userName} + ' ,twoja rezerwacja została zrealizowana pomyślnie. Potwierdzenie zostało wysłane na adres: '"></span>
+            <span th:text="${userMail}"></span>
+        </h1>
 </div>
 <br/>
-<div class="div">
+<div>
     <button type="button" onclick="window.location.href='/'" class="buttons"><b>Wróć</b></button>
 </div>
 
