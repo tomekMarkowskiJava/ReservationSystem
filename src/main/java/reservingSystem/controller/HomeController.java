@@ -1,6 +1,7 @@
 package reservingSystem.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.view.RedirectView;
 import reservingSystem.entity.Reservation;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +29,7 @@ public class HomeController {
 	}
 	
 	@PostMapping(value = {"/", "/index"})
-	public String makeReservation(@ModelAttribute("reservation") Reservation reservation
+	public RedirectView makeReservation(@ModelAttribute("reservation") Reservation reservation
 			, Model model) {
 
 
@@ -36,7 +37,8 @@ public class HomeController {
 		model.addAttribute("userMail", reservation.getEmail());
 		mailController.send(reservation.getName(), reservation.getEmail());
 
-		return "redirect:/confirmation"; //
+//		return "redirect:/confirmation";
+		return new RedirectView ("/confirmation");
 	}
 
 }
