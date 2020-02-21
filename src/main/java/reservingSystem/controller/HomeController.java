@@ -12,12 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class HomeController {
 
 	private MailController mailController;
-	private Reservation reservation;
 
 	@Autowired
-	public HomeController(MailController mailController, Reservation reservation) {
+	public HomeController(MailController mailController) {
 		this.mailController = mailController;
-		this.reservation = reservation;
 	}
 
 	@GetMapping(value = {"/", "/index"})
