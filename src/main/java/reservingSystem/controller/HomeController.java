@@ -32,7 +32,7 @@ public class HomeController {
 		return "confirmation";
 	}
 	
-	@PostMapping(value = {"/", "/index"})
+	@PostMapping(value = {"/confirmation"})
 	public String makeReservation(@ModelAttribute("reservation") Reservation reservation
 			, Model model) {
 
