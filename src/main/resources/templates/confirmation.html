@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:mvc="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Solarium Żar Tropików</title>
+
+    <link rel="stylesheet" type="text/css" href="css/page_style.css"/>
+
+</head>
+<body>
+<h1>Solarium Żar Tropików</h1>
+<!--<img src="../images/logo.jpg">-->
+<div class="div">
+        <h1>Super!</h1>
+        <br>
+        <h1><span th:text="${userName} + ' ,twoja rezerwacja została zrealizowana pomyślnie. Potwierdzenie zostało wysłane na adres: ' + ${userMail}"></span></h1>
+</div>
+<br/>
+<div class="div">
+    <button type="button" onclick="window.location.href='/'" class="buttons"><b>Wróć</b></button>
+</div>
+
+</body>
+</html>

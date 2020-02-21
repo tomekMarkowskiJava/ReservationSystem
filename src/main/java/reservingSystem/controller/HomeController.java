@@ -30,14 +30,13 @@ public class HomeController {
 	@PostMapping(value = {"/", "/index"})
 	public String makeReservation(@ModelAttribute("reservation") Reservation reservation
 			, Model model) {
-		
+
 
 		model.addAttribute("userName", reservation.getName());
 		model.addAttribute("userMail", reservation.getEmail());
-//		model.addAttribute("allReservations", (List<Reservation>)reservationRepository.findAll());
 		mailController.send(reservation.getName(), reservation.getEmail());
 
-		return "redirect:/index"; //
+		return "redirect:/confirmation"; //
 	}
 
 }
