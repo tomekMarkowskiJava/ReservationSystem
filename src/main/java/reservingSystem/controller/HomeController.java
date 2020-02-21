@@ -28,7 +28,7 @@ public class HomeController {
 	}
 
 	@GetMapping("/confirmation")
-	public String openConfirmationPage(Model model){
+	public String openConfirmationPage(@ModelAttribute ("reservation") Reservation reservation, Model model){
 		model.addAttribute("userName", reservation.getName());
 		model.addAttribute("userMail", reservation.getEmail());
 		return "confirmation";
