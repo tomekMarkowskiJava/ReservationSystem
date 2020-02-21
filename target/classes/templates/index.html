@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:mvc="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Solarium Żar Tropików</title>
-    
-    <link rel = "stylesheet" type = "text/css" href = "css/page_style.css" />
-    
-  </head>
-  <body>
-  <img src="../images/logo.jpg">
-  	<form action="/index.html" th:action="@{/index}"  th:object="${reservation}" method="post">
- 	<label>Imię: </label>
-  	 <input type="text" th:field="*{name}" placeholder="Podaj swoje imię" name="name" /><br/>
-  	 <label>E-mail: </label><br/>
- 	 <input type="text" th:field="*{email}" placeholder="Podaj adres e-mail" name="email" /><br/>
- 	 <input type="submit" value="Rezerwuj" />
-	</form>  
-	
-	<th:block>
-		<ul>
-			<th:block th:each="r : ${allReservations}">
-				<li><b><label th:text="${r.name}"></label></b><br/><label th:text="'Email: ' + ${r.email}"></label></li>
-			</th:block>
-		</ul>
-	</th:block>
-	
-	
-	
-  </body>
+
+    <link rel="stylesheet" type="text/css" href="css/page_style.css"/>
+
+</head>
+<body>
+<h1>Solarium Żar Tropików</h1>
+<h5>Rezerwuj</h5>
+<!--<img src="../images/logo.jpg">-->
+<form action="/index.html" th:action="@{/index}" th:object="${reservation}" method="post">
+    <label>Imię: </label>
+    <input type="text" th:field="*{name}" placeholder="Podaj swoje imię" name="name"/><br/>
+    <label>E-mail: </label><br/>
+    <input type="text" th:field="*{email}" placeholder="Podaj adres e-mail" name="email"/><br/>
+    <input type="submit" value="Rezerwuj"/>
+</form>
+
+<th:block>
+    <ul>
+<!--            <li><b><label th:text="${userName}"></label></b><br/><label th:text="${userMail}"></label></li>-->
+
+    </ul>
+</th:block>
+
+
+</body>
 </html>

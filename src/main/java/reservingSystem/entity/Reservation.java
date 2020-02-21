@@ -1,14 +1,11 @@
 package reservingSystem.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import org.springframework.stereotype.Component;
+
 import java.sql.Time;
 
-@Entity
+@Component
 public class Reservation {
-    @Id
-    @GeneratedValue
     private int id;
     private String name;
     private String email;
