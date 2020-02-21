@@ -21,13 +21,5 @@
         <span th:text="${reservation.getName()}"></span>
         <span th:text="${reservation.getEmail()}"></span>
 
-<th:block>
-    <ul>
-        <th:block th:text="${reservation}">
-            <li><b><label th:text="${reservation.getName()}"></label></b><br/><label th:text="'Email: ' + ${reservation.getEmail()}"></label></li>
-        </th:block>
-    </ul>
-</th:block>
-
 </body>
 </html>
