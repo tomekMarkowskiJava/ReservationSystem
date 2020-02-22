@@ -3,17 +3,17 @@ package reservingSystem.entity;
 import org.springframework.stereotype.Component;
 
 import java.sql.Time;
+import java.util.List;
 
 @Component
 public class Reservation {
     private String name;
     private String email;
     private String phoneNumber;
-
     private String bed;
     private Time time;
 //    private int numberOfMinutes;
-
+    private List <String> listOfBeds;
     public Reservation() {
     }
 
@@ -21,6 +21,13 @@ public class Reservation {
         this.name = name;
         this.email = email;
         this.bed = bed;
+
+        listOfBeds.add("Hawaje");
+        listOfBeds.add("Bora Bora");
+        listOfBeds.add("Mauritius");
+        listOfBeds.add("Dominikana");
+        listOfBeds.add("Bali");
+        listOfBeds.add("Seszele");
     }
 
     public String getName() {
@@ -61,6 +68,10 @@ public class Reservation {
 
     public void setTime(Time time) {
         this.time = time;
+    }
+
+    public List<String> getListOfBeds() {
+        return listOfBeds;
     }
 
     public void reset() {
