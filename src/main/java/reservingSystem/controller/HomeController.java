@@ -39,8 +39,8 @@ public class HomeController {
 		model.addAttribute("reservation", newReservation);
 		reservation.setName(newReservation.getName());
 		reservation.setEmail(newReservation.getEmail());
-		mailController.send(reservation.getName(), reservation.getEmail());
 		System.out.println(reservation.getEmail() + reservation.getName());
+		mailController.send(reservation.getName(), reservation.getEmail());
 		return "confirmation";
 	}
 
