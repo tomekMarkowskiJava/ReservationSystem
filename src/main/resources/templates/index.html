@@ -11,17 +11,18 @@
 <h1>Solarium Żar Tropików</h1>
 <!--<img src="../images/logo.jpg">-->
 <form action="/confirmation.html" th:action="@{/confirmation}" th:object="${reservation}" method="post">
-    <label>Imię: </label>
-    <input type="text" th:field="*{name}" placeholder="Podaj swoje imię" name="name"/><br/>
-    <label>E-mail: </label><br/>
-    <input type="text" th:field="*{email}" placeholder="Podaj adres e-mail" name="email"/><br/>
+    <label>Podaj swoje imię: </label>
+    <input type="text" th:field="*{name}" placeholder="Imię" name="name"/><br/>
+    <label>Podaj swój adres e-mail: </label><br/>
+    <input type="text" th:field="*{email}" placeholder="E-mail" name="email"/><br/>
+    <label>Wybierz łóżko: </label><br/>
     <select th:field="*{bed}">
         <option th:value="'Hawaje'" th:text="Hawaje"></option>
-<!--        <option th:value="'Bora Bora'" th:text="Bora Bora"></option>-->
-<!--        <option th:value="'Mauritius'" th:text="Mauritius"></option>-->
-<!--        <option th:value="'Dominikana'" th:text="Dominikana"></option>-->
-<!--        <option th:value="'Bali'" th:text="Bali"></option>-->
-<!--        <option th:value="'Seszele'" th:text="Seszele"></option>-->
+        <option th:value="'Bora Bora'" th:text="Bora Bora"></option>
+        <option th:value="'Mauritius'" th:text="Mauritius"></option>
+        <option th:value="'Dominikana'" th:text="Dominikana"></option>
+        <option th:value="'Bali'" th:text="Bali"></option>
+        <option th:value="'Seszele'" th:text="Seszele"></option>
 
 
     </select>
