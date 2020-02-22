@@ -40,7 +40,7 @@ public class HomeController {
 		reservation.setName(newReservation.getName());
 		reservation.setEmail(newReservation.getEmail());
 		reservation.setBed(newReservation.getBed());
-		mailController.send(reservation.getName(), reservation.getEmail());
+		mailController.send(reservation);
 		reservation.reset();
 		return "confirmation";
 	}

@@ -15,14 +15,9 @@ public class MailController {
     private String senderPassword = "test.solarium19";
     private Properties properties;
     private Session session;
-    private Reservation reservation;
 
-    @Autowired
-    public MailController(Reservation reservation) {
-        this.reservation = reservation;
-    }
 
-    public void send(){
+    public void send(Reservation reservation){
         session = Session.getDefaultInstance(setProperties(), new javax.mail.Authenticator(){
             protected PasswordAuthentication getPasswordAuthentication(){
                 return new PasswordAuthentication(senderEmail,senderPassword);
