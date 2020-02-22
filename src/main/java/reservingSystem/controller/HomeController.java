@@ -33,9 +33,10 @@ public class HomeController {
 	}
 	
 	@PostMapping(value = {"/confirmation"})
-	public String makeReservation(@ModelAttribute("reservation") Reservation newReservation
+	public String makeReservation(Reservation newReservation
 			, Model model) {
 
+		model.addAttribute("reservation", newReservation);
 		reservation.setName(newReservation.getName());
 		reservation.setEmail(newReservation.getEmail());
 		mailController.send(reservation.getName(), reservation.getEmail());
