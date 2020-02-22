@@ -13,7 +13,8 @@ public class Reservation {
     private String bed;
     private Time time;
 //    private int numberOfMinutes;
-    private List <String> listOfBeds;
+    public List <String> listOfBeds;
+
     public Reservation() {
     }
 
