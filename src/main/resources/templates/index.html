@@ -16,8 +16,9 @@
     <label>Podaj swój adres e-mail: </label><br/>
     <input type="text" th:field="*{email}" placeholder="E-mail" name="email"/><br/>
     <label>Wybierz łóżko: </label><br/>
-    <select th:each="bed: *{listOfBeds}">
-        <option th:value="${bed}" th:text="${bed}"></option>
+    <select th:field="*{listOfBeds}">
+        <option value=""> -- </option>
+        <option th:each="bed : ${reservation.listOfBeds}" th:value="${bed}" th:text="${bed}" ></option>
     </select>
     <input type="submit" value="Rezerwuj"/>
 </form>
