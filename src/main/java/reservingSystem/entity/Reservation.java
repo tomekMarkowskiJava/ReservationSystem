@@ -3,6 +3,7 @@ package reservingSystem.entity;
 import org.springframework.stereotype.Component;
 
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -13,7 +14,7 @@ public class Reservation {
     private String bed;
     private Time time;
 //    private int numberOfMinutes;
-    public List <String> listOfBeds;
+    public List <String> listOfBeds = new ArrayList<>();
 
     public Reservation() {
     }
