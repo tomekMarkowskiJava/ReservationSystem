@@ -12,32 +12,34 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class HomeController {
 
 	private MailController mailController;
+	private Reservation reservation;
 
 	@Autowired
-	public HomeController(MailController mailController) {
+	public HomeController(MailController mailController, Reservation reservation) {
 		this.mailController = mailController;
+		this.reservation = reservation;
 	}
 
 	@GetMapping(value = {"/", "/index"})
 	public String openHomePage(Model model) {
-		
-		model.addAttribute("reservation", new Reservation());
+		model.addAttribute("reservation", reservation);
 		return "index";
 	}
 
 	@GetMapping("/confirmation")
-	public String openConfirmationPage(@ModelAttribute ("reservation") Reservation reservation, Model model){
-		model.addAttribute("userName", reservation.getName());
-		model.addAttribute("userMail", reservation.getEmail());
+	public String openConfirmationPage(Model model){
+		model.addAttribute("reservation", reservation);
 		return "confirmation";
 	}
 	
 	@PostMapping(value = {"/confirmation"})
-	public String makeReservation(@ModelAttribute("reservation") Reservation reservation
+	public String makeReservation(@ModelAttribute("reservation") Reservation newReservation
 			, Model model) {
 
+		reservation.setName(newReservation.getName());
+		reservation.setEmail(newReservation.getEmail());
 		mailController.send(reservation.getName(), reservation.getEmail());
-
+		System.out.println(reservation.getEmail() + reservation.getName());
 		return "confirmation";
 	}
 
