@@ -1,5 +1,6 @@
 package reservingSystem.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import reservingSystem.entity.Reservation;
 
@@ -14,8 +15,14 @@ public class MailController {
     private String senderPassword = "test.solarium19";
     private Properties properties;
     private Session session;
+    private Reservation reservation;
 
-    public void send(Reservation reservation){
+    @Autowired
+    public MailController(Reservation reservation) {
+        this.reservation = reservation;
+    }
+
+    public void send(){
         session = Session.getDefaultInstance(setProperties(), new javax.mail.Authenticator(){
             protected PasswordAuthentication getPasswordAuthentication(){
                 return new PasswordAuthentication(senderEmail,senderPassword);
