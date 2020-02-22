@@ -1,6 +1,7 @@
 package reservingSystem.controller;
 
 import org.springframework.stereotype.Component;
+import reservingSystem.entity.Reservation;
 
 import java.util.Properties;
 import javax.mail.*;
@@ -14,7 +15,7 @@ public class MailController {
     private Properties properties;
     private Session session;
 
-    public void send(String recipientName, String recipientEmail){
+    public void send(Reservation reservation){
         session = Session.getDefaultInstance(setProperties(), new javax.mail.Authenticator(){
             protected PasswordAuthentication getPasswordAuthentication(){
                 return new PasswordAuthentication(senderEmail,senderPassword);
@@ -23,9 +24,10 @@ public class MailController {
 
         try {
             MimeMessage message = new MimeMessage(session);
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(reservation.getEmail()));
             message.setSubject("Rezerwacja");
-            message.setText("Cześć " + recipientName + ". Dziękujemy za rezerwację!");
+            message.setText("Cześć " + reservation.getName() +
+                    ". Dziękujemy za rezerwację! \nZarezerwowałeś łóżko: " +reservation.getBed() );
             Transport.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();
@@ -42,6 +44,5 @@ public class MailController {
         properties.put("mail.smtp.port", "465");
         return properties;
     }
-
 
 }

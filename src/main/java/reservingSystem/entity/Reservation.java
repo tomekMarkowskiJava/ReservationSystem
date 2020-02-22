@@ -6,31 +6,21 @@ import java.sql.Time;
 
 @Component
 public class Reservation {
-    private int id;
     private String name;
     private String email;
-    private String number;
+    private String phoneNumber;
 
     private String bed;
     private Time time;
 //    private int numberOfMinutes;
 
     public Reservation() {
-        name="";
-        email="";
     }
 
-    public Reservation(String name, String email) {
+    public Reservation(String name, String email, String bed) {
         this.name = name;
         this.email = email;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.bed = bed;
     }
 
     public String getName() {
@@ -49,12 +39,12 @@ public class Reservation {
         this.email = email;
     }
 
-    public String getNumber() {
-        return number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getBed() {
@@ -71,5 +61,13 @@ public class Reservation {
 
     public void setTime(Time time) {
         this.time = time;
+    }
+
+    public void reset() {
+        setEmail(null);
+        setName(null);
+        setBed(null);
+        setPhoneNumber(null);
+        setTime(null);
     }
 }
