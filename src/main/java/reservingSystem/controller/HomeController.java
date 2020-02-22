@@ -23,7 +23,7 @@ public class HomeController {
 	@GetMapping(value = {"/", "/index"})
 	public String openHomePage(Model model) {
 		model.addAttribute("reservation", reservation);
-		reservation.listOfBeds.add("Blabla");
+		reservation.createListOfBeds();
 		return "index";
 	}
 

@@ -11,15 +11,17 @@
 <h1>Solarium Żar Tropików</h1>
 <!--<img src="../images/logo.jpg">-->
 <form action="/confirmation.html" th:action="@{/confirmation}" th:object="${reservation}" method="post">
-    <label>Imię: </label>
-    <input type="text" th:field="*{name}" placeholder="Podaj swoje imię" name="name"/><br/>
-    <label>E-mail: </label><br/>
-    <input type="text" th:field="*{email}" placeholder="Podaj adres e-mail" name="email"/><br/>
+    <label>Podaj swoje imię: </label>
+    <input type="text" th:field="*{name}" placeholder="Imię" name="name"/><br/>
+    <label>Podaj swój adres e-mail: </label><br/>
+    <input type="text" th:field="*{email}" placeholder="E-mail" name="email"/><br/>
+    <label>Wybierz łóżko: </label><br/>
+    <select th:field="*{listOfBeds}">
+        <option value=""> -- </option>
+        <option th:each="bed : ${reservation.listOfBeds}" th:value="${bed}" th:text="${bed}" ></option>
+    </select>
     <input type="submit" value="Rezerwuj"/>
 </form>
-
-        <span th:text="${reservation.getName()}"></span>
-        <span th:text="${reservation.getEmail()}"></span>
 
 </body>
 </html>

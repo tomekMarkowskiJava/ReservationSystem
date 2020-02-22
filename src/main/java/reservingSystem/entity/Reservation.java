@@ -14,7 +14,7 @@ public class Reservation {
     private String bed;
     private Time time;
 //    private int numberOfMinutes;
-    public List <String> listOfBeds = new ArrayList<>();
+    private List <String> listOfBeds = new ArrayList<>();
 
     public Reservation() {
     }
@@ -23,13 +23,6 @@ public class Reservation {
         this.name = name;
         this.email = email;
         this.bed = bed;
-
-        listOfBeds.add("Hawaje");
-        listOfBeds.add("Bora Bora");
-        listOfBeds.add("Mauritius");
-        listOfBeds.add("Dominikana");
-        listOfBeds.add("Bali");
-        listOfBeds.add("Seszele");
     }
 
     public String getName() {
@@ -76,11 +69,21 @@ public class Reservation {
         return listOfBeds;
     }
 
+    public void createListOfBeds(){
+        listOfBeds.add("Hawaje");
+        listOfBeds.add("Bora Bora");
+        listOfBeds.add("Mauritius");
+        listOfBeds.add("Dominikana");
+        listOfBeds.add("Bali");
+        listOfBeds.add("Seszele");
+    }
+
     public void reset() {
         setEmail(null);
         setName(null);
         setBed(null);
         setPhoneNumber(null);
         setTime(null);
+        listOfBeds.clear();
     }
 }
