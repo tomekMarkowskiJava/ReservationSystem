@@ -11,7 +11,7 @@
 
 <center><img th:src="@{../images/logo.jpg}"/></center>
 <div class="div">
-    <form action="/confirmation.html" th:action="@{/confirmation}" th:object="${reservation}" method="post">
+    <form th:class="form" action="/confirmation.html" th:action="@{/confirmation}" th:object="${reservation}" method="post">
         <label>Podaj swoje imię: </label>
         <input type="text" th:field="*{name}" placeholder="Imię" name="name"/><br/>
         <label>Podaj swój adres e-mail: </label><br/>
