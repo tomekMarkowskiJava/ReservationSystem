@@ -1,18 +1,22 @@
 package reservingSystem.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import reservingSystem.entity.Reservation;
 
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import java.util.Properties;
-import javax.mail.*;
-import javax.mail.internet.*;
 
 @Component
 public class MailController {
 
     private String senderEmail = "test.solarium@gmail.com";
-    private String senderPassword = "test.solarium19";
+    private String senderPassword = "****";
     private Properties properties;
     private Session session;
 
