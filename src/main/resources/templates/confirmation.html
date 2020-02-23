@@ -14,12 +14,9 @@
     <h1>Super!</h1>
     <br>
         <h1>
-            <span th:text="${reservation.getName()}"></span>
-            , realizacja przebiegła pomyślnie. Zarezerwowałeś łóżko:
-            <span th:text="${reservation.getBed()}"></span>
-            . Potwierdzenie zostało wysłane na adres:
-            <span th:text="${reservation.getEmail()}"></span>
-            .
+            <span th:text="${reservation.getName()}"></span>, realizacja przebiegła pomyślnie.
+            Zarezerwowałeś łóżko: <span th:text="${reservation.getBed()}"></span>.
+            Potwierdzenie zostało wysłane na adres: <span th:text="${reservation.getEmail()}"></span>.
         </h1>
     </br>
 </div>
