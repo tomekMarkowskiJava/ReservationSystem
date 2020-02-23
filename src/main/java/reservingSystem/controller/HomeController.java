@@ -6,17 +6,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import reservingSystem.entity.ReservationConverter;
 
 @Controller
 public class HomeController {
 
 	private MailController mailController;
 	private Reservation reservation;
+	private ReservationConverter reservationConverter;
 
 	@Autowired
-	public HomeController(MailController mailController, Reservation reservation) {
+	public HomeController(MailController mailController, Reservation reservation, ReservationConverter reservationConverter) {
 		this.mailController = mailController;
 		this.reservation = reservation;
+		this.reservationConverter = reservationConverter;
 	}
 
 	@GetMapping(value = {"/", "/index"})
@@ -33,12 +36,11 @@ public class HomeController {
 	}
 	
 	@PostMapping(value = {"/confirmation"})
-	public String makeReservation(Model model) {
+	public String makeReservation(Reservation newReservation
+			, Model model) {
 
-		model.addAttribute("reservation", reservation);
-//		reservation.setName(newReservation.getName());
-//		reservation.setEmail(newReservation.getEmail());
-//		reservation.setBed(newReservation.getBed());
+		model.addAttribute("reservation", newReservation);
+		reservationConverter.convert(newReservation);
 		mailController.send(reservation);
 		return "confirmation";
 	}
