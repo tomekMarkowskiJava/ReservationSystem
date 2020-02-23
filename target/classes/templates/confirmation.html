@@ -9,15 +9,17 @@
 
 </head>
 <body>
-<h1>Solarium Żar Tropików</h1>
-<!--<img src="../images/logo.jpg">-->
-<div>
+<h1><img th:src="@{../images/logo.jpg}" /></h1>
+<div class="div">
     <h1>Super!</h1>
     <br>
         <h1>
             <span th:text="${reservation.getName()}"></span>
-            <span th:text="${reservation.getEmail()}"></span>
+            , realizacja przebiegła pomyślnie. Zarezerwowałeś łóżko:
             <span th:text="${reservation.getBed()}"></span>
+            . Potwierdzenie zostało wysłane na adres:
+            <span th:text="${reservation.getEmail()}"></span>
+            .
         </h1>
     </br>
 </div>
