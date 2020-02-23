@@ -16,7 +16,7 @@ import java.util.Properties;
 public class MailController {
 
     private String senderEmail = "test.solarium@gmail.com";
-    private String senderPassword = "****";
+    private String senderPassword = "test.solarium19";
     private Properties properties;
     private Session session;
 

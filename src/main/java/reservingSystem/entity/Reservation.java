@@ -70,6 +70,7 @@ public class Reservation {
     }
 
     public void createListOfBeds(){
+        reset();
         listOfBeds.add("Hawaje");
         listOfBeds.add("Bora Bora");
         listOfBeds.add("Mauritius");
