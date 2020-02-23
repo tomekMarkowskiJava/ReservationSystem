@@ -3,7 +3,7 @@ package reservingSystem.entity;
 import org.springframework.stereotype.Component;
 
 import java.sql.Time;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Component
@@ -13,8 +13,8 @@ public class Reservation {
     private String phoneNumber;
     private String bed;
     private Time time;
-//    private int numberOfMinutes;
-    private List <String> listOfBeds = new ArrayList<>();
+
+    private List <String> listOfBeds = Arrays.asList("Hawaje","Bora Bora", "Mauritius", "Dominikana", "Bali", "Seszele");
 
     public Reservation() {
     }
@@ -69,15 +69,6 @@ public class Reservation {
         return listOfBeds;
     }
 
-    public void createListOfBeds(){
-        reset();
-        listOfBeds.add("Hawaje");
-        listOfBeds.add("Bora Bora");
-        listOfBeds.add("Mauritius");
-        listOfBeds.add("Dominikana");
-        listOfBeds.add("Bali");
-        listOfBeds.add("Seszele");
-    }
 
     public void reset() {
         setEmail(null);
@@ -85,6 +76,5 @@ public class Reservation {
         setBed(null);
         setPhoneNumber(null);
         setTime(null);
-        listOfBeds.clear();
     }
 }

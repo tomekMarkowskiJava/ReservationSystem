@@ -22,7 +22,7 @@ public class HomeController {
 	@GetMapping(value = {"/", "/index"})
 	public String openHomePage(Model model) {
 		model.addAttribute("reservation", reservation);
-		reservation.createListOfBeds();
+		reservation.reset();
 		return "index";
 	}
 
@@ -33,13 +33,12 @@ public class HomeController {
 	}
 	
 	@PostMapping(value = {"/confirmation"})
-	public String makeReservation(Reservation newReservation
-			, Model model) {
+	public String makeReservation(Model model) {
 
-		model.addAttribute("reservation", newReservation);
-		reservation.setName(newReservation.getName());
-		reservation.setEmail(newReservation.getEmail());
-		reservation.setBed(newReservation.getBed());
+		model.addAttribute("reservation", reservation);
+//		reservation.setName(newReservation.getName());
+//		reservation.setEmail(newReservation.getEmail());
+//		reservation.setBed(newReservation.getBed());
 		mailController.send(reservation);
 		return "confirmation";
 	}
