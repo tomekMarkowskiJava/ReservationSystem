@@ -29,7 +29,7 @@ input[type=text], input[type=password], input[type=submit] {
 }
 
 button {
-    background-color: #2d6cdf;
+    background-color: gold;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -39,13 +39,14 @@ button {
 }
 
 .div {
-    background-color: white;
+    background-color: #cccccc;
+    border: 3px solid #f1f1f1;
     border-radius: 10px;
     padding: 5px 5px 10px 30px;
-    width: 600px;
-    opacity: 0.9;
-    position: center;
-    font-size: x-large;
+    max-width: 800px;
+    margin: auto;
+    margin-top: auto;
+    font-family: "Fira Code";
 }
 
 button:hover {

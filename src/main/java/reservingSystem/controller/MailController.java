@@ -16,15 +16,13 @@ import java.util.Properties;
 public class MailController {
 
     private String senderEmail = "test.solarium@gmail.com";
-    private String senderPassword = "xxxx";
-    private Properties properties;
-    private Session session;
+    private String senderPassword = "test.solarium19";
 
 
-    public void send(Reservation reservation){
-        session = Session.getDefaultInstance(setProperties(), new javax.mail.Authenticator(){
-            protected PasswordAuthentication getPasswordAuthentication(){
-                return new PasswordAuthentication(senderEmail,senderPassword);
+    void send(Reservation reservation){
+        Session session = Session.getDefaultInstance(setProperties(), new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(senderEmail, senderPassword);
             }
         });
 
@@ -42,7 +40,7 @@ public class MailController {
     }
 
     private Properties setProperties(){
-        properties = new Properties();
+        Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.socketFactory.port", "465");
         properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
