@@ -16,7 +16,7 @@ import java.util.Properties;
 public class MailController {
 
     private String senderEmail = "test.solarium@gmail.com";
-    private String senderPassword = "xxxx";
+    private String senderPassword = "test.solarium19";
 
 
     void send(Reservation reservation){
