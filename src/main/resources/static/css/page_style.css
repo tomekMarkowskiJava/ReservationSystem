@@ -27,7 +27,7 @@ input[type=text]{
     box-sizing: border-box;
 }
 
-facebook {
+a.facebook {
     position: fixed;
     left: 0;
     top: 310px;
