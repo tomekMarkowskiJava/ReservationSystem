@@ -13,7 +13,7 @@ h5 {
     padding: 5px 5px 10px 30px;
     max-width: 800px;
     margin: auto;
-    font-size: larger;
+    font-size: large;
     font-family: "Fira Code", fantasy;
 
 }
@@ -30,7 +30,7 @@ input[type=text]{
 
 a.facebook {
     border-radius: 10px;
-    padding: 5px 5px 10px 30px;
+    padding: 5px 5px 10px 20px;
     position: fixed;
     left: 0;
     top: 310px;
@@ -39,6 +39,7 @@ a.facebook {
     display: block;
     z-index: 999;
     background-image: url("../images/facebook.jpg");
+    background-repeat: no-repeat;
 }
 input[type=password], input[type=submit], input[type=button] {
     color: black;
@@ -59,7 +60,7 @@ input[type=password], input[type=submit], input[type=button] {
     padding: 5px 5px 10px 30px;
     max-width: 700px;
     margin: auto;
-    font-size: larger;
+    font-size: large;
     font-family: "Fira Code", fantasy;
 }
 
