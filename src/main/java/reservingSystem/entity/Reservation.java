@@ -2,7 +2,6 @@ package reservingSystem.entity;
 
 import org.springframework.stereotype.Component;
 
-import java.sql.Time;
 import java.util.Arrays;
 import java.util.List;
 
