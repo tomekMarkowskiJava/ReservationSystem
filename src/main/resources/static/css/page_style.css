@@ -19,7 +19,9 @@ h5 {
 
 }
 
-input[type=text], input[type=password], input[type=submit] {
+input[type=text], input[type=password], input[type=submit], input[type=button] {
+    color: black;
+    background-color: #ffd000;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -29,8 +31,6 @@ input[type=text], input[type=password], input[type=submit] {
 }
 
 .button {
-    color: black;
-    background-color: #ffd000;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
