@@ -31,7 +31,8 @@ public class MailController {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(reservation.getEmail()));
             message.setSubject("Rezerwacja");
             message.setText("Cześć " + reservation.getName() +
-                    ". Dziękujemy za rezerwację! \nZarezerwowałeś łóżko: " +reservation.getBed() + ", na godzinę: " +reservation.getTime());
+                    ". Dziękujemy za rezerwację! \nZarezerwowałeś łóżko: " +reservation.getBed() +
+                    ", na godzinę: " +reservation.getTime() + ".\nDo zobaczenia!");
             Transport.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();

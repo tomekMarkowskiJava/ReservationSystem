@@ -21,7 +21,7 @@
         <option value=""> -- </option>
         <option th:each="bed : ${reservation.listOfBeds}" th:value="${bed}" th:text="${bed}" ></option>
         <option value=""> -- </option>
-    </select>
+    </select><br/>
     <label>Wybierz czas:</label><br/>
     <input type="time" th:field="*{time}" placeholder="Czas" name="time"/>
     <input type="submit" value="Rezerwuj"/>

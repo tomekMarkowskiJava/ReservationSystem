@@ -16,8 +16,10 @@
         <h1>
             <span th:text="${reservation.getName()}"></span>, realizacja przebiegła pomyślnie.
             Zarezerwowałeś łóżko: <span th:text="${reservation.getBed()}"></span>
-            , na godzinę <span th:text="${reservation.getTime()}"></span> .
+            , na godzinę <span th:text="${reservation.getTime()}"></span>.
             Potwierdzenie zostało wysłane na adres: <span th:text="${reservation.getEmail()}"></span>.
+
+            Do zobaczenia!
         </h1>
     </br>
 </div>
