@@ -27,7 +27,17 @@ input[type=text]{
     box-sizing: border-box;
 }
 
-
+facebook {
+    position: fixed;
+    left: 0;
+    top: 310px;
+    width: 64px;
+    height: 118px;
+    display: block;
+    z-index: 999;
+    background-image: url("static/images/facebook.jpg");
+    background-repeat: no-repeat;
+}
 input[type=password], input[type=submit], input[type=button] {
     color: black;
     background-color: #ffd000;
