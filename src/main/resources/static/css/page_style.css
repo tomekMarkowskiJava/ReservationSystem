@@ -19,7 +19,17 @@ h5 {
 
 }
 
-input[type=text], input[type=password], input[type=submit], input[type=button] {
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+input[type=password], input[type=submit], input[type=button] {
     color: black;
     background-color: #ffd000;
     width: 100%;
@@ -30,14 +40,6 @@ input[type=text], input[type=password], input[type=submit], input[type=button] {
     box-sizing: border-box;
 }
 
-.button {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
 
 .div {
     background-color: #cccccc;
@@ -50,9 +52,6 @@ input[type=text], input[type=password], input[type=submit], input[type=button] {
     font-family: "Fira Code";
 }
 
-button:hover {
-    opacity: 0.8;
-}
 
 .imgcontainer {
     text-align: center;
