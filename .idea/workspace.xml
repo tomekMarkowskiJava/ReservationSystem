@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55873ba7-2626-49cb-9602-d4dc598867e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/page_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/page_style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -106,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/page_style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="153">
+              <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -360,7 +361,7 @@
       <workItem from="1583932942106" duration="592000" />
       <workItem from="1584216109837" duration="595000" />
       <workItem from="1584309782184" duration="580000" />
-      <workItem from="1585043036781" duration="10556000" />
+      <workItem from="1585043036781" duration="10809000" />
     </task>
     <task id="LOCAL-00001" summary="index.html updated">
       <created>1582153942460</created>
@@ -387,7 +388,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54849000" />
+    <option name="totallyTimeSpent" value="55102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
@@ -583,8 +584,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/page_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        <state relative-caret-position="153">
+          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
         </state>
       </provider>
     </entry>
