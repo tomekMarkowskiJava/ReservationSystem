@@ -12,19 +12,19 @@
 
 <form class="form" action="/confirmation.html" th:action="@{/confirmation}" th:object="${reservation}"
       method="post">
-        <label>Podaj swoje imię: </label>
-        <input type="text" th:field="*{name}" placeholder="Imię" name="name"/><br/>
-        <label>Podaj swój adres e-mail: </label><br/>
-        <input type="text" th:field="*{email}" placeholder="E-mail" name="email"/><br/>
-        <label>Wybierz łóżko: </label><br/>
-        <select th:field="*{bed}">
-            <option value=""> --</option>
-            <option th:each="bed : ${reservation.listOfBeds}" th:value="${bed}" th:text="${bed}"></option>
-            <option value=""> --</option>
-        </select><br/>
-        <label>Wybierz czas:</label><br/>
-        <input type="time" th:field="*{time}" placeholder="Czas" name="time"/>
-        <input type="submit" style="color: black; background-color: gold" value="Rezerwuj"/>
+    <label>Podaj swoje imię: </label>
+    <input type="text" th:field="*{name}" placeholder="Imię" name="name"/><br/>
+    <label>Podaj swój adres e-mail: </label><br/>
+    <input type="text" th:field="*{email}" placeholder="E-mail" name="email"/><br/>
+    <label>Wybierz łóżko: </label><br/>
+    <select th:field="*{bed}">
+        <option value=""> --</option>
+        <option th:each="bed : ${reservation.listOfBeds}" th:value="${bed}" th:text="${bed}"></option>
+        <option value=""> --</option>
+    </select><br/>
+    <label>Wybierz czas:</label><br/>
+    <input type="time" th:field="*{time}" placeholder="Czas" name="time"/>
+    <input type="submit" class="button" value="Rezerwuj"/>
 </form>
 
 </body>

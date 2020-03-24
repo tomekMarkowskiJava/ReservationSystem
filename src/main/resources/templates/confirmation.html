@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/html">
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Solarium Żar Tropików</title>
@@ -13,13 +13,13 @@
 <div class="div">
     <h1>Super!</h1>
     <br>
-        <span th:text="${reservation.getName()}"></span>, realizacja przebiegła pomyślnie.
-        Zarezerwowałeś łóżko: <span th:text="${reservation.getBed()}"></span>
-        , na godzinę <span th:text="${reservation.getTime()}"></span>.
-        Potwierdzenie zostało wysłane na adres: <span th:text="${reservation.getEmail()}"></span>.<br/>
-        Do zobaczenia!
+    <span th:text="${reservation.getName()}"></span>, rezerwacja przebiegła pomyślnie.
+    Zarezerwowałeś łóżko: <span th:text="${reservation.getBed()}">,</span>
+    na godzinę <span th:text="${reservation.getTime()}"></span>. <br/>
+    Potwierdzenie zostało wysłane na adres: <span th:text="${reservation.getEmail()}"></span>.<br/>
+    Do zobaczenia!
     </br>
-    <button type="button" class="button" style="color: black; background-color: gold" onclick="window.location.href='/'"><b>Wróć</b></button>
+    <button type="button" class="button" onclick="window.location.href='/'"><b>Wróć</b></button>
 </div>
 
 </body>
