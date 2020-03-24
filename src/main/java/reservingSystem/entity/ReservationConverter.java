@@ -19,6 +19,5 @@ public class ReservationConverter {
         reservation.setEmail(newReservation.getEmail());
         reservation.setBed(newReservation.getBed());
         reservation.setTime(newReservation.getTime());
-        reservation.setPhoneNumber(newReservation.getPhoneNumber());
     }
 }

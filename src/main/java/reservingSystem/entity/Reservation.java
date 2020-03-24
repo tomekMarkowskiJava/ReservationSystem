@@ -10,9 +10,8 @@ import java.util.List;
 public class Reservation {
     private String name;
     private String email;
-    private String phoneNumber;
     private String bed;
-    private Time time;
+    private String time;
 
     private List <String> listOfBeds = Arrays.asList("Hawaje","Bora Bora", "Mauritius", "Dominikana", "Bali", "Seszele");
 
@@ -41,14 +40,6 @@ public class Reservation {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
     public String getBed() {
         return bed;
     }
@@ -57,11 +48,11 @@ public class Reservation {
         this.bed = bed;
     }
 
-    public Time getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -74,7 +65,6 @@ public class Reservation {
         setEmail(null);
         setName(null);
         setBed(null);
-        setPhoneNumber(null);
         setTime(null);
     }
 }
