@@ -17,15 +17,14 @@
             <span th:text="${reservation.getName()}"></span>, realizacja przebiegła pomyślnie.
             Zarezerwowałeś łóżko: <span th:text="${reservation.getBed()}"></span>
             , na godzinę <span th:text="${reservation.getTime()}"></span>.
-            Potwierdzenie zostało wysłane na adres: <span th:text="${reservation.getEmail()}"></span>.
-
+            Potwierdzenie zostało wysłane na adres: <span th:text="${reservation.getEmail()}"></span>.<br/>
             Do zobaczenia!
         </h1>
     </br>
 </div>
 <br/>
 <div>
-    <button type="button" onclick="window.location.href='/'" class="buttons"><b>Wróć</b></button>
+    <button type="button" onclick="window.location.href='/'"><b>Wróć</b></button>
 </div>
 
 </body>
