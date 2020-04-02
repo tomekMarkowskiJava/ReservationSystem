@@ -30,7 +30,7 @@ input[type=text]{
 a.facebook {
     border-radius: 10px;
     position: fixed;
-    right: 0;
+    left: 0;
     top: 310px;
     width: 84px;
     height: 135px;
