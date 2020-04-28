@@ -15,14 +15,14 @@ import java.util.Properties;
 @Component
 public class MailController {
 
-    private String senderEmail = "test.solarium@gmail.com";
-    private String senderPassword = "test.solarium19";
+    private String adminEmail = "test.solarium@gmail.com";
+    private String adminPassword = "test.solarium19";
 
 
     void send(Reservation reservation){
         Session session = Session.getDefaultInstance(setProperties(), new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(senderEmail, senderPassword);
+                return new PasswordAuthentication(adminEmail, adminPassword);
             }
         });
 
@@ -38,6 +38,17 @@ public class MailController {
             e.printStackTrace();
         }
 
+        try {
+            MimeMessage message = new MimeMessage(session);
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(adminEmail));
+            message.setSubject("Nowa rezerwacja");
+            message.setText("Nowa rezerwacja.\n" + reservation.getName() +
+                    "dokonał rezerwacji na łóżko: -" + reservation.getBed() +
+                    ", na godzinę: " + reservation.getTime() + "\nAdres email klienta: " +reservation.getEmail());
+            Transport.send(message);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
     }
 
     private Properties setProperties(){
