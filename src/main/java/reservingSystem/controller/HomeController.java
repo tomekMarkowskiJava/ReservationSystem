@@ -41,8 +41,7 @@ public class HomeController {
 
         model.addAttribute("reservation", newReservation);
         reservationConverter.convert(newReservation);
-        mailController.sendToClient(reservation);
-        mailController.sendToAdmin(reservation);
+        mailController.sendMessages(reservation);
         return "confirmation";
     }
 

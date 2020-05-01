@@ -26,12 +26,17 @@ public class MailController {
         }
     });
 
-    void sendToClient(Reservation reservation) {
+    void sendMessages(Reservation reservation){
+        sendToClient(reservation);
+        sendToAdmin(reservation);
+    }
+
+    private void sendToClient(Reservation reservation) {
         ClientMailMessage clientMailMessage = new ClientMailMessage(reservation);
         try {
             MimeMessage message = new MimeMessage(session);
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(reservation.getEmail()));
-            message.setSubject("Solarium Żar Tropików - rezerwacja");
+            message.setSubject(clientMailMessage.getSubject());
             message.setText(clientMailMessage.getText());
             Transport.send(message);
         } catch (MessagingException e) {
@@ -39,12 +44,12 @@ public class MailController {
         }
     }
 
-    void sendToAdmin(Reservation reservation) {
+    private void sendToAdmin(Reservation reservation) {
         AdminMailMessage adminMailMessage = new AdminMailMessage(reservation);
         try {
             MimeMessage message = new MimeMessage(session);
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(adminEmail));
-            message.setSubject("Nowa rezerwacja - " + reservation.getName());
+            message.setSubject(adminMailMessage.getSubject());
             message.setText(adminMailMessage.getText());
             Transport.send(message);
         } catch (MessagingException e) {

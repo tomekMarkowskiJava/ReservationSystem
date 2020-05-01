@@ -2,8 +2,8 @@ package reservingSystem.entity;
 
 public class ClientMailMessage {
     private Reservation reservation;
-    private String text;
 
+    private String text;
     public ClientMailMessage(Reservation reservation) {
         this.reservation = reservation;
         String s = checkGender();
@@ -20,6 +20,10 @@ public class ClientMailMessage {
             return "zarezerwowałaś";
         else
             return "zarezerwowałeś";
+    }
+
+    public String getSubject() {
+        return "Solarium Żar Tropików - rezerwacja";
     }
 
     public String getText() {
