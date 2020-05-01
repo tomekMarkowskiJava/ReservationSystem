@@ -26,7 +26,7 @@ public class MailController {
         }
     });
 
-    void sendToClient(Reservation reservation){
+    void sendToClient(Reservation reservation) {
         ClientMailMessage clientMailMessage = new ClientMailMessage(reservation);
         try {
             MimeMessage message = new MimeMessage(session);
@@ -52,7 +52,7 @@ public class MailController {
         }
     }
 
-    private Properties setProperties(){
+    private Properties setProperties() {
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.socketFactory.port", "465");

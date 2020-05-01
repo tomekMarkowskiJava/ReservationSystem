@@ -12,7 +12,7 @@ public class Reservation {
     private String bed;
     private String time;
 
-    private List <String> listOfBeds = Arrays.asList("Hawaje","Bora Bora", "Mauritius", "Dominikana", "Bali", "Seszele");
+    private List<String> listOfBeds = Arrays.asList("Hawaje", "Bora Bora", "Mauritius", "Dominikana", "Bali", "Seszele");
 
     public Reservation() {
     }

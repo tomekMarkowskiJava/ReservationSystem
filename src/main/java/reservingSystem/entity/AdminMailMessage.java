@@ -10,15 +10,15 @@ public class AdminMailMessage {
 
         setText("Dokonano nowej rezerwacji.\n" + reservation.getName() +
                 s + " rezerwacji na łóżko " + reservation.getBed() +
-                ", na godzinę " + reservation.getTime() + "\nAdres email klienta: " +reservation.getEmail());
+                ", na godzinę " + reservation.getTime() + "\nAdres email klienta: " + reservation.getEmail());
     }
 
 
     private String checkGender() {
         if (reservation.getName().endsWith("a"))
-            return "zarezerwowała";
+            return " zarezerwowała";
         else
-            return "zarezerwował";
+            return " zarezerwował";
     }
 
     public String getText() {

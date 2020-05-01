@@ -9,7 +9,7 @@ public class ClientMailMessage {
         String s = checkGender();
 
         setText("Cześć " + reservation.getName() +
-                ". Dziękujemy za rezerwację!\n" + s + "łóżko: " + reservation.getBed() +
+                " :)\n Dziękujemy za rezerwację!\n" + s + " łóżko: " + reservation.getBed() +
                 ", na godzinę: " + reservation.getTime() + ".\nDo zobaczenia!" +
                 "\n\nPozdrawiamy, Solarium Żar Tropików.");
     }
@@ -27,6 +27,6 @@ public class ClientMailMessage {
     }
 
     private void setText(String text) {
-        this.text=text;
+        this.text = text;
     }
 }
