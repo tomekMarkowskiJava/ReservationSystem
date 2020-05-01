@@ -1,6 +1,8 @@
 package reservingSystem.controller;
 
 import org.springframework.stereotype.Component;
+import reservingSystem.entity.AdminMailMessage;
+import reservingSystem.entity.ClientMailMessage;
 import reservingSystem.entity.Reservation;
 
 import javax.mail.Message;
@@ -16,23 +18,21 @@ import java.util.Properties;
 public class MailController {
 
     private String adminEmail = "test.solarium@gmail.com";
-    private String adminPassword = "test.solarium19";
-    Session session = Session.getDefaultInstance(setProperties(), new javax.mail.Authenticator() {
+
+    private Session session = Session.getDefaultInstance(setProperties(), new javax.mail.Authenticator() {
         protected PasswordAuthentication getPasswordAuthentication() {
+            String adminPassword = "test.solarium19";
             return new PasswordAuthentication(adminEmail, adminPassword);
         }
     });
 
     void sendToClient(Reservation reservation){
-
+        ClientMailMessage clientMailMessage = new ClientMailMessage(reservation);
         try {
             MimeMessage message = new MimeMessage(session);
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(reservation.getEmail()));
             message.setSubject("Solarium Żar Tropików - rezerwacja");
-            message.setText("Cześć " + reservation.getName() +
-                    ". Dziękujemy za rezerwację! \nZarezerwowałeś łóżko: " +reservation.getBed() +
-                    ", na godzinę: " +reservation.getTime() + ".\nDo zobaczenia!" +
-                    "\n\nPozdrawiamy, Solarium Żar Tropików.");
+            message.setText(clientMailMessage.getText());
             Transport.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();
@@ -40,14 +40,12 @@ public class MailController {
     }
 
     void sendToAdmin(Reservation reservation) {
-
+        AdminMailMessage adminMailMessage = new AdminMailMessage(reservation);
         try {
             MimeMessage message = new MimeMessage(session);
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(adminEmail));
             message.setSubject("Nowa rezerwacja - " + reservation.getName());
-            message.setText("Dokonano nowej rezerwacji.\n" + reservation.getName() +
-                    " dokonał rezerwacji na łóżko " + reservation.getBed() +
-                    ", na godzinę " + reservation.getTime() + "\nAdres email klienta: " +reservation.getEmail());
+            message.setText(adminMailMessage.getText());
             Transport.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();
