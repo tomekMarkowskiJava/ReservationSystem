@@ -94,3 +94,123 @@ span.psw {
         width: 100%;
     }
 }
+
+/* FOOTER */
+footer .container {
+    width: 1000px;
+}
+footer iframe {
+    border: none;
+    width: 270px;
+    height: 186px;
+    margin: 0;
+    padding: 0;
+}
+footer .row {
+    position: relative;
+    /* contact boxes */
+    /* footer - last row */
+}
+footer .row.first {
+    border-bottom: solid 1px #b1b1b1;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #e4e4e4;
+    margin-top: 15px;
+    height: 186px;
+    overflow: hidden;
+    padding: 2px;
+    width: 996px;
+    box-shadow:0pt 15px 10px -12px rgba(0, 0, 0, 0.5), 0pt 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow:0pt 15px 12px -10px rgba(0, 0, 0, 0.5), 0pt 1px 4px rgba(0, 0, 0, 0.3);
+}
+footer .row.last {
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    color: #dddddd;
+    padding-top: 18px;
+    padding-bottom: 14px;
+    line-height: 18px;
+}
+footer .row.last a {
+    color: #dddddd;
+    font-weight: bold;
+}
+footer .row.last a:hover {
+    color: #fff;
+}
+footer .row.last .column span {
+    font-weight: bold;
+}
+footer .row.last .column.align-left {
+    margin-left: 20px;
+    width: 500px;
+}
+footer .row.last .column.align-right {
+    margin-right: 20px;
+    width: 240px;
+    text-align: right;
+}
+footer .contact {
+    padding-top: 50px;
+    padding-bottom: 11px;
+    position: absolute;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    bottom: 2px;
+}
+footer .contact .box {
+    width: 195px;
+}
+footer .contact.first {
+    z-index: 9;
+    left: 302px;
+    float: left;
+    width: 386px;
+
+}
+footer .contact.last {
+    z-index: 10;
+    right: 0px;
+    float: right;
+    width: 350px;
+}
+footer .contact h4 {
+    margin-bottom: 15px;
+}
+footer .contact p {
+    font-style: italic;
+    line-height: 1.4;
+    word-spacing: -2px;
+}
+footer .contact aside.first p {
+    font-size: 18px;
+}
+footer .contact aside.second {
+    padding-bottom: 5px;
+}
+footer .contact aside.second p {
+    font-size: 14px;
+}
+footer .contact aside.last p {
+    font-size: 12px;
+}
+footer .contact u {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1;
+    text-decoration: none;
+}
+footer .contact b {
+    font-weight: bold;
+}
+footer .contact a {
+    text-decoration: underline;
+    color: inherit;
+}
+footer .contact a:hover {
+    text-decoration: none;
+}
