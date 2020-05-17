@@ -65,7 +65,7 @@ html, body, div, span, applet, object, iframe {
     background-color: #cccccc;
     border: 3px solid #f1f1f1;
     border-radius: 10px;
-    padding: 5px 5px 10px 30px;
+    padding: 5px 10px 5px 10px;
     max-width: 700px;
     margin: auto;
     font-size: medium;
