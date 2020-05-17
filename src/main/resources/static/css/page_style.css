@@ -59,6 +59,7 @@ input[type=password], input[type=submit], input[type=button] {
     max-width: 700px;
     margin: auto;
     font-size: medium;
+    display: inline-block;
 }
 
 
