@@ -60,6 +60,7 @@ input[type=password], input[type=submit], input[type=button] {
     margin: auto;
     font-size: medium;
     display: inline-block;
+    position: absolute;
 }
 
 
